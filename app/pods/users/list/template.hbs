@@ -1,0 +1,19 @@
+<!-- users/list/template.hbs -->
+{{#each messages}}
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+    <h1>Regisztrált felhasználók</h1>
+</div>
+
+{{log model}}
+{{user-list users=model}}
+
+<p>
+    <button {{action "showModal" "new-user-modal" "users.list"}} class="btn btn-default">Új felhasználó felvitele</button>
+</p>
+

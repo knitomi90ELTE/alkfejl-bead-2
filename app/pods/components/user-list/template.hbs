@@ -1,0 +1,26 @@
+<!-- components/user-list/template.hbs -->
+<table class="table table-striped table-hover " id="userTable">
+    <thead>
+        <tr>
+            <th>MTRA</th>
+            <th>Keresztnév</th>
+            <th>Vezetéknév</th>
+        </tr>   
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{mtra}}</td>
+            <!--td><span class="label label-{{statusClass}}">{{statusText}}</span></td-->
+            <td>{{forename}}</td>
+            <td>{{surname}}</td>
+            <td><span class="badge">{{numberOfMessages}}</span> {{description}}</td>
+            <td>
+                {{link-to "Megtekint" "users.view" this class="btn btn-primary btn-sm"}}
+                {{link-to "Szerkeszt" "users.edit" this class="btn btn-warning btn-sm"}}
+                <button {{action "deleteUser" this}} class="btn btn-danger btn-sm">Törlés</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

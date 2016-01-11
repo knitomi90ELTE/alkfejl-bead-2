@@ -1,0 +1,12 @@
+<!-- components/user-detail/template.hbs -->
+<dl class="dl-horizontal">
+  <dt>id</dt>
+  <dd>{{user.id}}</dd>
+  <dt>MTRA</dt>
+  <dd>{{user.mtra}}</dd>
+  <dt>Keresztnév</dt>
+  <dd>{{user.forename}}</dd>
+  <dt>Vezetéknév</dt>
+  <dd>{{user.surname}}</dd>
+</dl>
+{{link-to "Vissza" "users.list" class="btn btn-default"}}

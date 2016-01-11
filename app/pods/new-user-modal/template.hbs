@@ -1,0 +1,4 @@
+<!-- new-user-modal/template.hbs -->
+{{#modal-dialog title="Új felhasználó" close="removeModal"}}
+  {{new-user-form onSave=(action "newUser")}}
+{{/modal-dialog}}

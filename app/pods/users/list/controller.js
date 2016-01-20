@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
     actions: {
         newUser(formData) {
-            console.log('users/list/controller.js newUser action')
+            console.log('users/list/controller.js newUser action');
             var user = this.store.createRecord('user', Object.assign({
                 mtra: 'MTRA',
                 forename: 'keresztnév',

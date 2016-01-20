@@ -1,0 +1,12 @@
+<!-- components/subject-detail/template.hbs -->
+<dl class="dl-horizontal">
+  <dt>id</dt>
+  <dd>{{subject.id}}</dd>
+  <dt>Tárgy neve</dt>
+  <dd>{{subject.subjectName}}</dd>
+  <dt>Terem</dt>
+  <dd>{{subject.room}}</dd>
+  <dt>Leírás</dt>
+  <dd>{{subject.description}}</dd>
+</dl>
+{{link-to "Vissza" "subjects.list" class="btn btn-default"}}

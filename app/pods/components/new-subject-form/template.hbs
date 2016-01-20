@@ -1,0 +1,32 @@
+<!-- components/new-subject-form/template.hbs -->
+{{log error}}
+<form class="form-horizontal" method="post" data-toggle="validator">
+    <fieldset>
+        <div class="form-group {{if subjects.subjectName "has-error"}}">
+            <label for="subjectName" class="col-lg-3 control-label">Tárgy neve</label>
+            <div class="col-xs-5">
+                <input required class="form-control" id="subjectName" name="subjectName" placeholder="Tárgy neve" type="text" value="{{subject.subjectName}}">
+                <div class="help-block">{{subjects.subjectName}}</div>
+            </div>
+        </div>
+        <div class="form-group {{if subjects.room "has-error"}}">
+            <label for="room" class="col-lg-3 control-label">Terem</label>
+            <div class="col-xs-5">
+                <input required class="form-control" id="room" placeholder="Terem" name="room" value="{{subject.room}}">
+                <div class="help-block">{{subjects.room}}</div>
+            </div>
+        </div>
+        <div class="form-group {{if subjects.description "has-error"}}">
+            <label for="description" class="col-lg-3 control-label">Leírás</label>
+            <div class="col-xs-5">
+                <input required class="form-control" id="description" placeholder="Leírás" name="description" value="{{subject.description}}">
+                <div class="help-block">{{subjects.description}}</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-3">
+                <button {{action "submit"}} class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>        

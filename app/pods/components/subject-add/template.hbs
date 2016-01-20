@@ -1,0 +1,24 @@
+<!-- components/subject-add/template.hbs -->
+<table class="table table-striped table-hover " id="subjectTable">
+    <thead>
+        <tr>
+            <th>Tárgy neve</th>
+            <th>Terem</th>
+            <th>Leírás</th>
+            <th></th>
+        </tr>   
+    </thead>
+    <tbody>
+        {{#each subjects}}
+        <tr>
+            <td>{{subjectName}}</td>
+            <td>{{room}}</td>
+            <td>{{description}}</td>
+            <td>
+                <button {{action "addSubject" this}} class="btn btn-success btn-sm">Felvesz</button>
+                <button {{action "removeSubject" this}} class="btn btn-danger btn-sm">Lead</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

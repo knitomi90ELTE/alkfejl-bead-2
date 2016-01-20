@@ -1,8 +1,8 @@
-//users/view/route.js
+//users/list/route.js
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    /*model() {
+    model() {
         return this.store.findAll('subject');
-    }*/
+    }
 });

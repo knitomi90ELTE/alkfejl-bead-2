@@ -6,6 +6,6 @@ export default Ember.Component.extend({
         deleteUser(user) {
             user.deleteRecord();
             user.save();
-        }
+        },
     }
 });

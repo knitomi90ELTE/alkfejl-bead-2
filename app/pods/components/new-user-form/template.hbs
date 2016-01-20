@@ -3,23 +3,23 @@
 <form class="form-horizontal" method="post" data-toggle="validator">
     <fieldset>
         <div class="form-group {{if users.mtra "has-error"}}">
-            <label for="mtra" class="col-lg-2 control-label">MTRA</label>
-            <div class="col-xs-3">
+            <label for="mtra" class="col-lg-3 control-label">MTRA</label>
+            <div class="col-xs-5">
                 <input required class="form-control" id="mtra" name="mtra" placeholder="MTRA" type="text" value="{{user.mtra}}">
                 <div class="help-block">{{users.mtra}}</div>
             </div>
         </div>
         <div class="form-group {{if users.forename "has-error"}}">
-            <label for="forename" class="col-lg-2 control-label">Keresztnév</label>
-            <div class="col-xs-3">
-                <input required class="form-control" rows="3" id="forename" name="forename" value="{{user.forename}}">
+            <label for="forename" class="col-lg-3 control-label">Keresztnév</label>
+            <div class="col-xs-5">
+                <input required class="form-control" id="forename" placeholder="Keresztnév" name="forename" value="{{user.forename}}">
                 <div class="help-block">{{users.forename}}</div>
             </div>
         </div>
         <div class="form-group {{if users.surname "has-error"}}">
-            <label for="surname" class="col-lg-2 control-label">Vezetéknév</label>
-            <div class="col-xs-3">
-                <input required class="form-control" rows="3" id="surname" name="surname" value="{{user.surname}}">
+            <label for="surname" class="col-lg-3 control-label">Vezetéknév</label>
+            <div class="col-xs-5">
+                <input required class="form-control" id="surname" placeholder="Vezetéknév" name="surname" value="{{user.surname}}">
                 <div class="help-block">{{users.surname}}</div>
             </div>
         </div>

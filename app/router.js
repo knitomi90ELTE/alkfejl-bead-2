@@ -10,9 +10,15 @@ Router.map(function() {
     this.route('users', function() {
         this.route('list');
         this.route('new');
-        this.route('view', {path:'/:userr_id'});
+        this.route('view', {path:'/:user_id'});
         this.route('edit', {path:'/edit/:user_id'});
-      });
+    });
+    this.route('subjects', function() {
+        this.route('list');
+        this.route('new');
+        this.route('view', {path:'/:subject_id'});
+        this.route('edit', {path:'/edit/:subject_id'});
+    });
 });
 
 export default Router;

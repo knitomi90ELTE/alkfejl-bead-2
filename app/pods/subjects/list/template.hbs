@@ -1,0 +1,19 @@
+<!-- subjects/list/template.hbs -->
+{{#each messages}}
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+    <h1>Tantárgyak</h1>
+</div>
+
+{{log model}}
+{{subject-list subjects=model}}
+
+<p>
+    <button {{action "showModal" "new-subject-modal" "subjects.list"}} class="btn btn-default">Új tantárgy felvitele</button>
+</p>
+
